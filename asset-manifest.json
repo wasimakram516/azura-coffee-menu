@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/azura-coffee-menu/static/css/main.8b7cf20c.css",
-    "main.js": "/azura-coffee-menu/static/js/main.7383dfc1.js",
+    "main.js": "/azura-coffee-menu/static/js/main.f66fb5c5.js",
     "static/js/453.1c4f4897.chunk.js": "/azura-coffee-menu/static/js/453.1c4f4897.chunk.js",
     "static/media/AzuraHDlogo.webp": "/azura-coffee-menu/static/media/AzuraHDlogo.559f6224c9d9eaf24dac.webp",
     "static/media/FrontPageBackground.webp": "/azura-coffee-menu/static/media/FrontPageBackground.7fee67891be693650612.webp",
@@ -32,11 +32,11 @@
     "static/media/PourOver.webp": "/azura-coffee-menu/static/media/PourOver.b374945f67e0f80a57b0.webp",
     "index.html": "/azura-coffee-menu/index.html",
     "main.8b7cf20c.css.map": "/azura-coffee-menu/static/css/main.8b7cf20c.css.map",
-    "main.7383dfc1.js.map": "/azura-coffee-menu/static/js/main.7383dfc1.js.map",
+    "main.f66fb5c5.js.map": "/azura-coffee-menu/static/js/main.f66fb5c5.js.map",
     "453.1c4f4897.chunk.js.map": "/azura-coffee-menu/static/js/453.1c4f4897.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8b7cf20c.css",
-    "static/js/main.7383dfc1.js"
+    "static/js/main.f66fb5c5.js"
   ]
 }
