@@ -120,7 +120,7 @@ const Home = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   textAlign: "center",
-                  minWidth: 80,
+                  width: 120,
                 }}
               >
                 <Avatar
@@ -139,7 +139,7 @@ const Home = () => {
                   variant="body2"
                   noWrap
                   sx={{
-                    maxWidth: 60,
+                    maxWidth: 120,
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     fontSize: "0.9rem",
