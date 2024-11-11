@@ -13,13 +13,15 @@ const Home = () => {
 
   // Filter Best Seller and Trending items
   const bestSellers = productData.flatMap((category, categoryIndex) =>
-    category.items.map((item, itemIndex) => ({ ...item, categoryIndex, itemIndex }))
-      .filter(item => item.bestSeller)
+    category.items
+      .map((item, itemIndex) => ({ ...item, categoryIndex, itemIndex }))
+      .filter((item) => item.bestSeller)
   );
 
   const trendingItems = productData.flatMap((category, categoryIndex) =>
-    category.items.map((item, itemIndex) => ({ ...item, categoryIndex, itemIndex }))
-      .filter(item => item.trending)
+    category.items
+      .map((item, itemIndex) => ({ ...item, categoryIndex, itemIndex }))
+      .filter((item) => item.trending)
   );
 
   // Handle navigation to CategoryPage with category name
@@ -30,13 +32,27 @@ const Home = () => {
   return (
     <Box padding={2}>
       {/* Logo at the Top */}
-      <Box display="flex" justifyContent="center" mb={4}>
+      <Link
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          navigate(`/`);
+        }}
+        display="flex"
+        justifyContent="center"
+        mb={4}
+      >
         <img src={logo} alt="Azura Logo" style={{ width: "80%" }} />
-      </Box>
+      </Link>
 
       {/* Categories Section */}
       <Box mb={4}>
-        <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          mb={2}
+        >
           <Typography variant="h6">Categories</Typography>
           <Link
             href="#"
@@ -138,7 +154,9 @@ const Home = () => {
       </Box>
 
       {/* Divider */}
-      <Divider sx={{ mb: 3, borderColor: "#71C4D8", width: "50%", margin: "0 auto" }} />
+      <Divider
+        sx={{ mb: 3, borderColor: "#71C4D8", width: "50%", margin: "0 auto" }}
+      />
 
       {/* Best Seller Section */}
       <Box sx={{ marginY: 4 }}>
@@ -157,20 +175,30 @@ const Home = () => {
           </Link>
         </Box>
 
-        <Box display="flex" flexWrap="wrap" justifyContent="center" sx={{ marginTop: 4 }} gap={2}>
-          {(showAllBestSellers ? bestSellers : bestSellers.slice(0, 2)).map((product, index) => (
-            <ProductCard
-              key={index}
-              product={product}
-              categoryIndex={product.categoryIndex}
-              itemIndex={product.itemIndex}
-            />
-          ))}
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="center"
+          sx={{ marginTop: 4 }}
+          gap={2}
+        >
+          {(showAllBestSellers ? bestSellers : bestSellers.slice(0, 2)).map(
+            (product, index) => (
+              <ProductCard
+                key={index}
+                product={product}
+                categoryIndex={product.categoryIndex}
+                itemIndex={product.itemIndex}
+              />
+            )
+          )}
         </Box>
       </Box>
 
       {/* Divider */}
-      <Divider sx={{ mb: 3, borderColor: "#71C4D8", width: "50%", margin: "0 auto" }} />
+      <Divider
+        sx={{ mb: 3, borderColor: "#71C4D8", width: "50%", margin: "0 auto" }}
+      />
 
       {/* Trending Section */}
       <Box sx={{ marginY: 4 }}>
@@ -189,15 +217,23 @@ const Home = () => {
           </Link>
         </Box>
 
-        <Box display="flex" flexWrap="wrap" justifyContent="center" sx={{ marginTop: 4 }} gap={2}>
-          {(showAllTrending ? trendingItems : trendingItems.slice(0, 2)).map((product, index) => (
-            <ProductCard
-              key={index}
-              product={product}
-              categoryIndex={product.categoryIndex}
-              itemIndex={product.itemIndex}
-            />
-          ))}
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="center"
+          sx={{ marginTop: 4 }}
+          gap={2}
+        >
+          {(showAllTrending ? trendingItems : trendingItems.slice(0, 2)).map(
+            (product, index) => (
+              <ProductCard
+                key={index}
+                product={product}
+                categoryIndex={product.categoryIndex}
+                itemIndex={product.itemIndex}
+              />
+            )
+          )}
         </Box>
       </Box>
     </Box>
